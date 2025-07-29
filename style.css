@@ -1,8 +1,10 @@
+/* Font family */
 body {
     font-family: "Raleway", sans-serif;
 }
 
 
+/* Nava bar */
 .navbar-brand img {
     height: 50px;
 }
@@ -14,11 +16,11 @@ body {
     padding: 4px 0;
 }
 
-
 .logo-img {
     height: 60px;
     object-fit: contain;
 }
+
 
 /* About-us */
 .about-img-wrapper {
@@ -32,7 +34,6 @@ body {
     height: 100%;
     object-fit: cover;
 }
-
 
 
 /* Card image for gallery */
@@ -54,6 +55,7 @@ body {
     align-items: center;
 }
 
+/* Card body */
 .card-body {
     border-radius: 0px !important;
 }
@@ -108,7 +110,6 @@ body {
     padding-left: 5px;
 }
 
-
 .custom-round-img {
     width: 200px !important;
     height: 200px !important;
@@ -116,11 +117,9 @@ body {
     object-fit: cover;
 }
 
-
 /* Drooling Discounts section  */
 .discount-section {
     background-color: #5c5c5c;
-    /* Matches screenshot background */
 }
 
 .discount-icon {
@@ -145,6 +144,13 @@ body {
     width: auto;
 }
 
+/* Nutrituous food */
+.nutritious-food-section img {
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: contain;
+}
+
 
 /* Testimonial */
 .carousel-indicators [data-bs-target] {
@@ -163,11 +169,31 @@ body {
     background-color: #00ff6f4d
 }
 
+.testimonial-section {
+    background-color: #cce0ff;
+}
+
+
 .testimonial-item-card img {
     height: 80px !important;
     width: 80px !important;
     border-radius: 50%;
 }
+
+
+.testimonial-item-card {
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+    height: 250px;
+    margin: 20px 0;
+    border-radius: 20px;
+}
+
 
 /* Footer section */
 .btn-circle {
@@ -196,61 +222,28 @@ body {
 
 .occasionSlider .owl-nav,
 .reelslider .owl-nav {
-    position: absolute;
-    top: 40%;
-    width: 100%;
     display: flex;
-    justify-content: space-between;
-    pointer-events: none;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
 }
 
 .occasionSlider .owl-nav button,
-.reelslider .owl-nav button
- {
-    background: transparent;
-    border: none;
-    pointer-events: auto;
+.reelslider .owl-nav button {
+    background: #fff !important;
+    border-radius: 50px !important;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+    height: 40px;
+    width: 40px;
 }
-
-.occasionSlider .owl-nav i,
-.reelslider .owl-nav i {
-    font-size: 30px;
-    color: #000;
-    background: #fff;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-
-.occasionSlider .owl-nav i:hover,
-.reelslider .owl-nav i:hover {
-    background: transparent;
-    color: #000;
-}
-
-.occasionSlider .owl-theme .owl-nav [class*=owl-]:hover,
-.reelslider .owl-theme .owl-nav [class*=owl-]:hover
- {
-    background: none !important;
-}
-
-.occasionSlider .owl-nav i:hover,
-.reelslider .owl-nav i:hover {
-    background: #fff;
-    color: #000;
-}
-
-
 
 .testimonialSlider .owl-nav {
-    display: flex ; 
+    display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-
-.testimonialSlider .owl-nav button{
+.testimonialSlider .owl-nav button {
     height: 40px;
     width: 40px;
     margin-top: 20px;
@@ -260,8 +253,31 @@ body {
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
 }
 
-/* Nutrituous food */
-.nutritious-food-section img{
-    width: 150px !important;
-    height: 150px !important;
+/* Contact us section */
+.contact-section input:focus,
+.contact-section textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border-bottom: 2px solid #f65d5d;
+}
+
+.contact-section form {
+    background: #fff;
+    border-radius: 15px;
+}
+
+.contact-section .btn-danger {
+    background: #f65d5d;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.contact-section .btn-danger:hover {
+    background: #d94c4c;
+}
+
+.contact-section .btn-info {
+    background: #008CBA;
+    border: none;
+    font-weight: bold;
 }
