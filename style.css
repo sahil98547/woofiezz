@@ -1,7 +1,8 @@
 /* =======================
    Global Styles
 ======================= */
-body {
+body,
+footer {
     font-family: "Raleway", sans-serif;
 }
 
@@ -29,13 +30,19 @@ body {
 /* =======================
    Navbar
 ======================= */
-/* Navbar brand logo */
+
+/* Logo */
 .logo-img {
     height: 60px;
     object-fit: contain;
 }
 
-/* Custom slide-in effect for mobile nav */
+/* Always hide the checkbox */
+.menu-btn {
+    display: none;
+}
+
+/* Custom Mobile Nav */
 @media (max-width: 991px) {
     .custom-collapse {
         position: fixed;
@@ -46,33 +53,96 @@ body {
         background: #fff;
         box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
         transition: left 0.4s ease;
-        padding-top: 60px;
+        padding-top: 80px;
         z-index: 1050;
     }
 
-    .custom-collapse.show {
+    .menu-btn:checked~.custom-collapse {
         left: 0;
+        background-color: #cce0ff;
     }
 
     .navbar-nav {
         flex-direction: column;
-        padding-left: 20px;
     }
 
-    .custom-toggler {
-        border: none;
-        outline: none;
+    .navbar-nav .nav-item a {
+        padding-left: 15px;
+        border-bottom: 1px solid #000;
+        font-weight: 600;
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        padding: 20px;
         z-index: 1100;
     }
 
-    .custom-toggler .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    .menu-icon .navicon {
+        background: #333;
+        display: block;
+        height: 2px;
+        width: 25px;
+        position: relative;
+        transition: background 0.2s ease-out;
     }
 
-    .custom-toggler.collapsed .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-width='2' d='M6 6l18 18M24 6L6 24'/%3E%3C/svg%3E");
+    .menu-icon .navicon:before,
+    .menu-icon .navicon:after {
+        content: '';
+        background: #333;
+        display: block;
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        transition: all 0.2s ease-out;
+    }
+
+    .menu-icon .navicon:before {
+        top: 7px;
+    }
+
+    .menu-icon .navicon:after {
+        top: -7px;
+    }
+
+    .menu-btn:checked~.menu-icon .navicon {
+        background: transparent;
+    }
+
+    .menu-btn:checked~.menu-icon .navicon:before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .menu-btn:checked~.menu-icon .navicon:after {
+        transform: rotate(45deg);
+        top: 0;
     }
 }
+
+/* Desktop */
+@media (min-width: 992px) {
+    .menu-icon {
+        display: none;
+    }
+
+    .custom-collapse {
+        position: static;
+        height: auto;
+        width: auto;
+        box-shadow: none;
+        padding-top: 0;
+        left: 0;
+    }
+
+    .navbar-nav .nav-item a {
+        font-weight: 600;
+    }
+}
+
+
 
 
 /* =======================
@@ -168,6 +238,15 @@ body {
     }
 }
 
+@media (max-width: 426px) {
+    .custom-round-img {
+        width: 135px !important;
+        height: 135px !important;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
 
 /* =======================
    Discounts Section
@@ -182,18 +261,18 @@ body {
 }
 
 /* =======================
-   Logo Marquee
+   Brand logo
 ======================= */
-.logo-marquee {
-    overflow: hidden;
-    position: relative;
-    white-space: nowrap;
+.brand-logo {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 21px;
 }
 
-.logo-track {
-    display: inline-flex;
-    animation: marquee 20s linear infinite;
-}
 
 /* =======================
    Nutritious Food

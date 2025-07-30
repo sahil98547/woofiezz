@@ -36,11 +36,10 @@
 <body>
 
     <!-- Banner -->
-    <div id="topBanner" class="top-banner d-flex justify-content-center align-items-center position-relative">
+    <!-- <div id="topBanner" class="top-banner d-flex justify-content-center align-items-center position-relative">
         <span>Use Code: <strong>JOINTHEFAM</strong> for FLAT 15% OFF</span>
         <button type="button" class="btn-close position-absolute end-0 me-3" aria-label="Close"></button>
-    </div>
-
+    </div> -->
 
 
     <!-- Navbar -->
@@ -51,14 +50,14 @@
                 <img src="./img/woofiezz-logo.avif" class="logo-img" alt="Logo">
             </a>
 
-            <!-- Custom Hamburger / Cross -->
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <!-- Custom Hamburger using Checkbox -->
+            <input type="checkbox" class="menu-btn" id="menu-btn" aria-label="Toggle Navigation Menu">
+            <label class="menu-icon custom-toggler" for="menu-btn">
+                <span class="navicon"></span>
+            </label>
 
             <!-- Navbar Items -->
-            <div class="collapse navbar-collapse custom-collapse" id="mainNavbar">
+            <div class="custom-collapse" id="mainNavbar">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
                     <li class="nav-item"><a class="nav-link" href="#">Pet Food</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Clothing</a></li>
@@ -69,6 +68,7 @@
             </div>
         </div>
     </nav>
+
 
 
     <!-- Full-width Video Section -->
@@ -485,17 +485,25 @@
     <section class="py-5 bg-white brand-logo-section">
         <div class="container">
             <div class="row justify-content-center align-items-center text-center g-4 brand-logo-row">
-                <div class="col-6 col-sm-4 col-md-2 brand-logo">
-                    <img src="./img/Amazon-Logo-2000-present-1024x576.avif" alt="Amazon" class="img-fluid">
+                <div class="col-6 col-sm-4 col-md-2">
+                    <div class="brand-logo">
+                        <img src="./img/Amazon-Logo-2000-present-1024x576.avif" alt="Amazon" class="img-fluid">
+                    </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-2 brand-logo">
-                    <img src="./img/Big_basket_logo.avif" alt="Big Basket" class="img-fluid">
+                <div class="col-6 col-sm-4 col-md-2">
+                    <div class="brand-logo">
+                        <img src="./img/Big_basket_logo.avif" alt="Big Basket" class="img-fluid">
+                    </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-2 brand-logo">
-                    <img src="./img/woofiezz-logo.avif" alt="Woofiezz" class="img-fluid">
+                <div class="col-6 col-sm-4 col-md-2">
+                    <div class="brand-logo">
+                        <img src="./img/woofiezz-logo.avif" alt="Woofiezz" class="img-fluid">
+                    </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-2 brand-logo">
-                    <img src="./img/wts-pro-super-tails-logo.avif" alt="Super Tails" class="img-fluid">
+                <div class="col-6 col-sm-4 col-md-2">
+                    <div class="brand-logo">
+                        <img src="./img/wts-pro-super-tails-logo.avif" alt="Super Tails" class="img-fluid">
+                    </div>
                 </div>
             </div>
         </div>
@@ -631,12 +639,16 @@
 
                         <p class="mb-3 d-flex align-items-center">
                             <i class="bi bi-telephone-fill me-2 text-warning"></i>
-                            <span>+91 9810021634, +91 9810309966</span>
+                            <a href="tel:+919810021634" class="text-decoration-none text-white">
+                                +91 9810021634, +91 9810309966
+                            </a>
                         </p>
 
                         <p class="mb-3 d-flex align-items-center">
                             <i class="bi bi-envelope-fill me-2 text-warning"></i>
-                            <span>teamwoofiezz@gmail.com</span>
+                            <a href="mailto:teamwoofiezz@gmail.com" class="text-decoration-none text-white">
+                                teamwoofiezz@gmail.com
+                            </a>
                         </p>
 
                         <p class="d-flex align-items-center">
@@ -725,16 +737,30 @@
                 <!-- Contact Us Section -->
                 <div class="col-md-4 mb-4 text-center text-md-start">
                     <h5 class="fw-bold">Contact Us</h5>
-                    <p class="mb-2"><i class="bi bi-telephone me-2 footer-symbol"></i>91 9810021634, +91 9810309966</p>
-                    <p class="mb-2"><i class="bi bi-envelope me-2 footer-symbol"></i> teamwoofiezz@gmail.com</p>
+                    <p class="mb-2">
+                        <i class="bi bi-telephone me-2 footer-symbol"></i>
+                        <a href="tel:+919810021634" class="text-white text-decoration-none">
+                            +91 9810021634
+                        </a>,
+                        <a href="tel:+919810309966" class="text-white text-decoration-none">
+                            +91 9810309966
+                        </a>
+                    </p>
+
+                    <p class="mb-2">
+                        <i class="bi bi-envelope me-2 footer-symbol"></i>
+                        <a href="mailto:teamwoofiezz@gmail.com" class="text-white text-decoration-none">
+                            teamwoofiezz@gmail.com
+                        </a>
+                    </p>
                     <p class="mb-2"><i class="bi bi-geo-alt me-2 footer-symbol"></i>W5/6 Sainik Farms, New Delhi -
                         110062</p>
 
                     <!-- Social Media Icons -->
                     <div class="mt-3 d-flex justify-content-center justify-content-md-start">
-                        <a href="#" class="btn btn-light btn-circle me-2 facebook"><i class="fab fa-facebook"></i></a>
+                        <!-- <a href="#" class="btn btn-light btn-circle me-2 facebook"><i class="fab fa-facebook"></i></a> -->
                         <a href="#" class="btn btn-light btn-circle me-2 instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="btn btn-light btn-circle me-2 youtube"><i class="fab fa-youtube"></i></a>
+                        <!-- <a href="#" class="btn btn-light btn-circle me-2 youtube"><i class="fab fa-youtube"></i></a> -->
                         <a href="#" class="btn btn-light btn-circle whatsapp"><i class="fab fa-whatsapp"></i></a>
                     </div>
 
@@ -750,7 +776,7 @@
     </footer>
 
 
-    <a href="https://wa.me/0001112223" target="_blank" class="btn btn-success btn-circle whatsapp-float">
+    <a href="https://wa.me/9650789966" target="_blank" class="btn btn-success btn-circle whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
 
