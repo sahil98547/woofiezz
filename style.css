@@ -264,7 +264,7 @@ footer {
    Brand logo
 ======================= */
 .brand-logo {
-    width: 150px;
+    max-width: 150px;
     height: 150px;
     display: flex;
     justify-content: center;
