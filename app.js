@@ -73,4 +73,43 @@ $('.testimonialSlider').owlCarousel({
 
 
 
+// Show Back-to-Top when user scrolls
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+        backToTop.style.display = "flex";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
 
+
+
+// Scroll to top smoothly
+backToTop.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
+
+// promotion section cross button
+document.addEventListener("DOMContentLoaded", function () {
+    const closeBtn = document.querySelector("#topBanner .btn-close");
+    const banner = document.getElementById("topBanner");
+
+    closeBtn.addEventListener("click", function () {
+        banner.classList.add("hide");
+        setTimeout(() => banner.remove(), 500); // removes from DOM after fade
+    });
+});
+
+
+
+// Toggle Hamburger ↔ Cross
+document.addEventListener("DOMContentLoaded", function () {
+    const toggler = document.querySelector(".custom-toggler");
+
+    toggler.addEventListener("click", function () {
+        toggler.classList.toggle("collapsed");
+    });
+});

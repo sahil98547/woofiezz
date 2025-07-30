@@ -1,28 +1,83 @@
-/* Font family */
+/* =======================
+   Global Styles
+======================= */
 body {
     font-family: "Raleway", sans-serif;
 }
 
 
-/* Nava bar */
-.navbar-brand img {
-    height: 50px;
-}
+/* =======================
+   promotion banner cross section
+======================= */
 
 .top-banner {
     background-color: #cce0ff;
     text-align: center;
     font-size: 14px;
-    padding: 4px 0;
+    padding: 8px 40px;
+    /* room for close button */
+    position: relative;
+    transition: opacity 0.5s ease;
 }
 
+.top-banner.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* =======================
+   Navbar
+======================= */
+/* Navbar brand logo */
 .logo-img {
     height: 60px;
     object-fit: contain;
 }
 
+/* Custom slide-in effect for mobile nav */
+@media (max-width: 991px) {
+    .custom-collapse {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 250px;
+        background: #fff;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+        transition: left 0.4s ease;
+        padding-top: 60px;
+        z-index: 1050;
+    }
 
-/* About-us */
+    .custom-collapse.show {
+        left: 0;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    .custom-toggler {
+        border: none;
+        outline: none;
+        z-index: 1100;
+    }
+
+    .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .custom-toggler.collapsed .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-width='2' d='M6 6l18 18M24 6L6 24'/%3E%3C/svg%3E");
+    }
+}
+
+
+/* =======================
+   About Us
+======================= */
 .about-img-wrapper {
     max-width: 100%;
     aspect-ratio: 4 / 3;
@@ -35,39 +90,25 @@ body {
     object-fit: cover;
 }
 
-
-/* Card image for gallery */
-.carousel-inner img {
-    height: 400px;
-    object-fit: cover;
-}
-
+/* =======================
+   Product Section
+======================= */
 .product-section {
     background-color: #00ff6f4d;
 }
 
-.rainy-day-eye-button {
-    font-size: 22px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Card body */
-.card-body {
-    border-radius: 0px !important;
-}
-
-.card-body>a {
-    border-radius: 0;
+.product-section-text {
+    background-color: #00ff6f4d;
+    padding-left: 5px;
 }
 
 .product-section-text h5 {
     font-size: 18px;
 }
 
+/* =======================
+   Cards
+======================= */
 .custom-card {
     border: none !important;
 }
@@ -77,7 +118,6 @@ body {
     overflow: hidden;
 }
 
-/* Image hover zoom */
 .custom-card img {
     transition: transform 0.5s ease;
 }
@@ -86,8 +126,18 @@ body {
     transform: scale(1.05);
 }
 
-/* Eye button initially hidden (off-screen to right) */
+.custom-card:hover {
+    border-radius: 0px !important;
+}
+
+/* Eye button */
 .rainy-day-eye-button {
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     bottom: 20px;
     right: 0px;
@@ -95,21 +145,12 @@ body {
     transition: all 0.4s ease;
 }
 
-.custom-card:hover {
-    border-radius: 0px !important;
-}
-
-/* On hover, slide in from right */
 .custom-card:hover .rainy-day-eye-button {
     right: 15px;
     opacity: 1;
 }
 
-.product-section-text {
-    background-color: #00ff6f4d;
-    padding-left: 5px;
-}
-
+/* Round Images */
 .custom-round-img {
     width: 200px !important;
     height: 200px !important;
@@ -117,7 +158,20 @@ body {
     object-fit: cover;
 }
 
-/* Drooling Discounts section  */
+
+@media (max-width: 1024px) {
+    .custom-round-img {
+        width: 150px !important;
+        height: 150px !important;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+
+/* =======================
+   Discounts Section
+======================= */
 .discount-section {
     background-color: #5c5c5c;
 }
@@ -127,7 +181,9 @@ body {
     height: auto;
 }
 
-/* Nutritious food  */
+/* =======================
+   Logo Marquee
+======================= */
 .logo-marquee {
     overflow: hidden;
     position: relative;
@@ -139,23 +195,29 @@ body {
     animation: marquee 20s linear infinite;
 }
 
-.logo-img {
-    height: 80px;
-    width: auto;
-}
-
-/* Nutrituous food */
+/* =======================
+   Nutritious Food
+======================= */
 .nutritious-food-section img {
     width: 150px !important;
     height: 150px !important;
     object-fit: contain;
 }
 
+/* =======================
+   Testimonials
+======================= */
+.testimonial-section {
+    background-color: #cce0ff;
+}
 
-/* Testimonial */
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+}
+
 .carousel-indicators [data-bs-target] {
     background-color: #000;
-    /* black dots */
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -166,20 +228,8 @@ body {
 
 .carousel-indicators .active {
     opacity: 1;
-    background-color: #00ff6f4d
+    background-color: #00ff6f4d;
 }
-
-.testimonial-section {
-    background-color: #cce0ff;
-}
-
-
-.testimonial-item-card img {
-    height: 80px !important;
-    width: 80px !important;
-    border-radius: 50%;
-}
-
 
 .testimonial-item-card {
     background: #fff;
@@ -194,8 +244,154 @@ body {
     border-radius: 20px;
 }
 
+.testimonial-item-card img {
+    height: 80px !important;
+    width: 80px !important;
+    border-radius: 50%;
+}
 
-/* Footer section */
+/* =======================
+   Owl Carousel
+======================= */
+.occasionSlider .owl-nav,
+.reelslider .owl-nav,
+.testimonialSlider .owl-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.occasionSlider .owl-nav button,
+.reelslider .owl-nav button,
+.testimonialSlider .owl-nav button {
+    height: 40px;
+    width: 40px;
+    background: #fff !important;
+    border-radius: 50px !important;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+    font-size: 20px !important;
+}
+
+/* =======================
+   Contact Us
+======================= */
+.contact-section input:focus,
+.contact-section textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.contact-section form {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.contact-right-section {
+    background: #fbcb5c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section h2,
+.contact-section h3 {
+    letter-spacing: 1px;
+}
+
+.input-group-text {
+    color: #555;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.form-control {
+    box-shadow: none !important;
+}
+
+.input-textarea span {
+    margin: 0 10px !important;
+    padding-top: 8px !important;
+}
+
+.contact-left-section .contact-info-box {
+    max-width: 500px;
+    width: 100%;
+    text-align: left;
+}
+
+.contact-left-section i {
+    border: 2px solid #fbcb5c;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.contact-left-section p {
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+@media (max-width: 426px) {
+    .custom-col {
+        padding: 20px 25px !important;
+    }
+
+    .contact-form-right-input {
+        margin-bottom: 10px !important;
+    }
+}
+
+
+
+/* =======================
+   Footer
+======================= */
+footer {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer h5 {
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fbcb5c;
+}
+
+footer .text-muted {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 14px;
+}
+
+/* Social Icons */
 .btn-circle {
     width: 45px;
     height: 45px;
@@ -203,81 +399,94 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 18px;
+    background: #222;
+    color: #fff;
+    transition: all 0.3s ease;
+    border: 1px solid #444;
 }
 
-.brand-logo-row {
-    gap: 50px !important;
+
+.btn-circle.facebook:hover {
+    background: #1877f2;
+    color: #fff;
+    border-color: #1877f2;
 }
 
-.brand-logo {
-    width: 160px !important;
-    height: 160px !important;
-    display: flex;
+.btn-circle.instagram:hover {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    color: #fff;
+    border: none;
+}
+
+.btn-circle.youtube:hover {
+    background: #ff0000;
+    color: #fff;
+    border-color: #ff0000;
+}
+
+.btn-circle.whatsapp:hover {
+    background: #25d366;
+    color: #fff;
+    border-color: #25d366;
+}
+
+/* Copyright Bar */
+footer .border-top {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+
+.footer-symbol {
+    border: 2px solid #fff;
+    width: 32px;
+    display: inline-flex;
+    height: 32px;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
 }
 
-/* Owl Carousel */
 
-.occasionSlider .owl-nav,
-.reelslider .owl-nav {
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: #25d366;
+    border-color: #25d366;
+    color: white;
+    font-size: 22px;
+    width: 55px;
+    height: 55px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin-top: 30px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
 }
 
-.occasionSlider .owl-nav button,
-.reelslider .owl-nav button {
-    background: #fff !important;
-    border-radius: 50px !important;
-    box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
-    height: 40px;
-    width: 40px;
+.whatsapp-float:hover {
+    background: #20ba5a;
 }
 
-.testimonialSlider .owl-nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.testimonialSlider .owl-nav button {
-    height: 40px;
-    width: 40px;
-    margin-top: 20px;
-    font-size: 20px !important;
-    background: #fff !important;
-    border-radius: 50px;
-    box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
-}
-
-/* Contact us section */
-.contact-section input:focus,
-.contact-section textarea:focus {
-    outline: none;
-    box-shadow: none;
-    border-bottom: 2px solid #f65d5d;
-}
-
-.contact-section form {
-    background: #fff;
-    border-radius: 15px;
-}
-
-.contact-section .btn-danger {
-    background: #f65d5d;
-    border: none;
-    transition: all 0.3s ease;
-}
-
-.contact-section .btn-danger:hover {
-    background: #d94c4c;
-}
-
-.contact-section .btn-info {
-    background: #008CBA;
-    border: none;
-    font-weight: bold;
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 90px;
+    /* placed above WhatsApp button */
+    right: 20px;
+    z-index: 9999;
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 22px;
 }

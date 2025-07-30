@@ -35,10 +35,13 @@
 
 <body>
 
-
-    <div class="top-banner">
-        Use Code: <strong>JOINTHEFAM</strong> for FLAT 15%OFF
+    <!-- Banner -->
+    <div id="topBanner" class="top-banner d-flex justify-content-center align-items-center position-relative">
+        <span>Use Code: <strong>JOINTHEFAM</strong> for FLAT 15% OFF</span>
+        <button type="button" class="btn-close position-absolute end-0 me-3" aria-label="Close"></button>
     </div>
+
+
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-white shadow-sm">
@@ -48,29 +51,20 @@
                 <img src="./img/woofiezz-logo.avif" class="logo-img" alt="Logo">
             </a>
 
-            <!-- Navbar Toggler (for mobile) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <!-- Custom Hamburger / Cross -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <!-- Navbar Items -->
-            <div class="collapse navbar-collapse" id="mainNavbar">
+            <div class="collapse navbar-collapse custom-collapse" id="mainNavbar">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pet Food</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Clothing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Accessories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Walking Essentials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Beds</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Pet Food</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Clothing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Accessories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Walking Essentials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Beds</a></li>
                 </ul>
             </div>
         </div>
@@ -90,6 +84,7 @@
                 type="video/mp4" />
         </video>
     </section>
+
 
     <!-- About us section -->
     <section class="py-5">
@@ -128,8 +123,6 @@
             </div>
         </div>
     </section>
-
-
 
 
     <!-- Product Section -->
@@ -568,106 +561,6 @@
         </div>
     </section>
 
-
-
-
-    <section class="py-5 bg-light">
-        <div class="container">
-
-            <div class="row g-4">
-
-                <!-- First Card  -->
-                <div class="col-md-3 col-sm-6 col-12">
-                    <div class="card h-100 position-relative">
-                        <img src="./img/card-1-1.avif" class="card-img-top" alt="Red Dino Raincoat">
-
-                        <!-- Overlay Icons -->
-                        <div class="position-absolute top-0 end-0 p-2">
-                            <button class="btn btn-light btn-sm rounded-circle me-1" data-bs-toggle="modal"
-                                data-bs-target="#quickViewModal">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                        </div>
-
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Red Dino Shirt</h5>
-                            <p class="card-text text-muted">Rs. 1,599.00</p>
-                            <a href="#" class="btn btn-primary w-100">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Second Card -->
-                <div class="col-md-3 col-sm-6 col-12">
-                    <div class="card h-100 position-relative">
-                        <img src="./img/card-1-1.avif" class="card-img-top" alt="Red Dino Raincoat">
-
-                        <!-- Overlay Icons -->
-                        <div class="position-absolute top-0 end-0 p-2">
-                            <button class="btn btn-light btn-sm rounded-circle me-1" data-bs-toggle="modal"
-                                data-bs-target="#quickViewModal">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                        </div>
-
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Red Dino Shirt</h5>
-                            <p class="card-text text-muted">Rs. 1,599.00</p>
-                            <a href="#" class="btn btn-primary w-100">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Third Card -->
-                <div class="col-md-3 col-sm-6 col-12">
-                    <div class="card h-100 position-relative">
-                        <img src="./img/card-1-1.avif" class="card-img-top" alt="Red Dino Raincoat">
-
-                        <!-- Overlay Icons -->
-                        <div class="position-absolute top-0 end-0 p-2">
-                            <button class="btn btn-light btn-sm rounded-circle me-1" data-bs-toggle="modal"
-                                data-bs-target="#quickViewModal">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                        </div>
-
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Red Dino Shirt</h5>
-                            <p class="card-text text-muted">Rs. 1,599.00</p>
-                            <a href="#" class="btn btn-primary w-100">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Fourth Card -->
-                <div class="col-md-3 col-sm-6 col-12">
-                    <div class="card h-100 position-relative">
-                        <img src="./img/card-1-1.avif" class="card-img-top" alt="Red Dino Raincoat">
-
-                        <!-- Overlay Icons -->
-                        <div class="position-absolute top-0 end-0 p-2">
-                            <button class="btn btn-light btn-sm rounded-circle me-1" data-bs-toggle="modal"
-                                data-bs-target="#quickViewModal">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                        </div>
-
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Red Dino Shirt</h5>
-                            <p class="card-text text-muted">Rs. 1,599.00</p>
-                            <a href="#" class="btn btn-primary w-100">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
     <!-- Testimonial section-->
     <section class="pt-5 testimonial-section">
         <div class="container">
@@ -720,14 +613,6 @@
                         <h6 class="fw-bold">Likhita Miriyala</h6>
                     </div>
                 </div>
-                <!-- Fixed Indicators -->
-                <!-- <div class="text-center mt-4">
-                    <div class="carousel-indicators position-static">
-                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
-                            aria-current="true"></button>
-                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -735,108 +620,144 @@
 
     <!-- Contact us section -->
     <section class="contact-section">
-        <div class="container-fluid">
+        <div class="container-fluid p-0">
             <div class="row g-0">
 
                 <!-- Left Side with Background Image -->
-                <div class="col-md-6  text-center text-dark p-5"
-                    style="background: url('./img/contact-us.avif') center/cover no-repeat; min-height: 100vh;">
-                    <div>
-                        <h2 class="fw-bold text-danger mb-4">CONTACT US</h2>
-                        <p class="mb-2"><strong>Phone Number:</strong> +91 9810021634, +91 9810309966</p>
-                        <p class="mb-2"><strong>Email:</strong> teamwoofiezz@gmail.com</p>
-                        <p><strong>Address:</strong> W5/6 Sainik Farms New Delhi - 110062</p>
-                        <div class="mt-3" style="height: 3px; width: 60px; background: #f65d5d; margin: auto;"></div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center text-white p-5 contact-left-section custom-col"
+                    style="background: url('./img/background-contact.jpg') center/cover no-repeat; min-height: 100vh;">
+                    <div class="bg-dark bg-opacity-50 p-4 rounded contact-info-box">
+                        <h2 class="fw-bold mb-4 text-warning text-start">CONTACT US</h2>
+
+                        <p class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-telephone-fill me-2 text-warning"></i>
+                            <span>+91 9810021634, +91 9810309966</span>
+                        </p>
+
+                        <p class="mb-3 d-flex align-items-center">
+                            <i class="bi bi-envelope-fill me-2 text-warning"></i>
+                            <span>teamwoofiezz@gmail.com</span>
+                        </p>
+
+                        <p class="d-flex align-items-center">
+                            <i class="bi bi-geo-alt-fill me-2 text-warning"></i>
+                            <span>W5/6 Sainik Farms New Delhi - 110062</span>
+                        </p>
+
+                        <div class="mt-3 mx-auto" style="height: 3px; width: 60px; background: #fbcb5c;"></div>
                     </div>
                 </div>
 
                 <!-- Right Side -->
-                <div class="col-md-6 d-flex flex-column justify-content-center bg-danger text-white p-5">
-                    <h3 class="fw-bold mb-4">Send Us a Message</h3>
-                    <form class="bg-white text-dark rounded-3 shadow p-4">
+                <div
+                    class="col-md-6 d-flex flex-column justify-content-center text-dark p-5 contact-right-section custom-col">
+                    <h3 class="fw-bold mb-4 text-center">Send Us a Message</h3>
+                    <form class="bg-white text-dark rounded-3 shadow p-4 mx-auto contact-form-box">
                         <div class="row mb-3">
-                            <div class="col">
-                                <input type="text" class="form-control border-0 border-bottom" placeholder="Name">
+                            <div class="col-lg-6 col-md-12 col-sm-12 my-sm-2 my-lg-0 my-md-2 contact-form-right-input">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-0 border-bottom">
+                                        <i class="bi bi-person"></i>
+                                    </span>
+                                    <input type="text" class="form-control border-0 border-bottom" placeholder="Name">
+                                </div>
                             </div>
-                            <div class="col">
-                                <input type="email" class="form-control border-0 border-bottom" placeholder="Email">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-0 border-bottom">
+                                        <i class="bi bi-envelope"></i>
+                                    </span>
+                                    <input type="email" class="form-control border-0 border-bottom" placeholder="Email">
+                                </div>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control border-0 border-bottom" placeholder="Subject">
+                            <div class="input-group">
+                                <span class="input-group-text bg-transparent border-0 border-bottom">
+                                    <i class="bi bi-pencil"></i>
+                                </span>
+                                <input type="text" class="form-control border-0 border-bottom" placeholder="Subject">
+                            </div>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control border-0 border-bottom" rows="4"
-                                placeholder="Type your message here..."></textarea>
+                            <div class="input-group input-textarea">
+                                <span class="bg-transparent border-0 pt-3">
+                                    <i class="bi bi-chat-dots"></i>
+                                </span>
+                                <textarea class="form-control border-0 border-bottom" rows="4"
+                                    placeholder="Type your message here..."></textarea>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-danger w-100 fw-bold shadow">Submit</button>
+
+                        <button type="submit" class="btn btn-dark w-100 fw-bold shadow">Submit</button>
                     </form>
-
-                    <!-- Social Media -->
-                    <div class="text-center mt-4">
-                        <a href="#" class="text-white fs-4 me-3"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="text-white fs-4 me-3"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-white fs-4 me-3"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-white fs-4 me-3"><i class="bi bi-google"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
-                    </div>
                 </div>
-
             </div>
         </div>
-
-        <!-- Floating Chat Button -->
-        <a href="https://wa.me/919810021634" target="_blank"
-            class="btn btn-info rounded-pill position-fixed bottom-0 end-0 m-4 shadow-lg px-4 py-2 d-flex align-items-center">
-            <i class="bi bi-chat-dots me-2"></i> Let's Chat!
-        </a>
     </section>
 
 
 
     <!-- Footer section -->
-    <footer class="text-white py-5" style="background-color: #000;">
+    <footer class="text-white pt-5" style="background-color: #000;">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-start">
 
-                <!-- Left Section -->
+                <!-- Logo Section -->
                 <div class="col-md-4 mb-4 text-center text-md-start">
-                    <h3 class="fw-bold">Let's get in touch</h3>
-                    <p>Sign up for our newsletter and be updated on crazy offers</p>
-                    <form class="d-flex mb-3">
-                        <input type="email" class="form-control me-2" placeholder="Enter your email">
-                        <button class="btn btn-primary">Subscribe</button>
-                    </form>
-                    <div>
-                        <a href="#" class="btn btn-light btn-circle me-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="btn btn-light btn-circle me-2"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="btn btn-light btn-circle me-2"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="btn btn-light btn-circle"><i class="bi bi-youtube"></i></a>
-                    </div>
+                    <img src="./img/woofiezz-logo.avif" alt="Woofiezz Logo" class="img-fluid mb-3"
+                        style="max-width: 180px;">
+                    <p class="small text-muted">Bringing style and comfort to your furry friends since 2022.</p>
                 </div>
 
-                <!-- Middle Section -->
+                <!-- Information Section -->
                 <div class="col-md-4 mb-4 text-center text-md-start">
                     <h5 class="fw-bold">Information</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white text-decoration-none">Our Stores</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Terms & Conditions</a></li>
+                        <li><a href="terms.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Returns/Exchanges</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">FAQs</a></li>
                     </ul>
                 </div>
 
-                <!-- Right Section -->
-                <div class="col-md-4 text-center text-md-start">
-                    <h5 class="fw-bold">Contact us:</h5>
-                    <p class="mb-1">+91-8790595966</p>
-                    <p class="mb-3">info@dogobow.com</p>
+                <!-- Contact Us Section -->
+                <div class="col-md-4 mb-4 text-center text-md-start">
+                    <h5 class="fw-bold">Contact Us</h5>
+                    <p class="mb-2"><i class="bi bi-telephone me-2 footer-symbol"></i>91 9810021634, +91 9810309966</p>
+                    <p class="mb-2"><i class="bi bi-envelope me-2 footer-symbol"></i> teamwoofiezz@gmail.com</p>
+                    <p class="mb-2"><i class="bi bi-geo-alt me-2 footer-symbol"></i>W5/6 Sainik Farms, New Delhi -
+                        110062</p>
+
+                    <!-- Social Media Icons -->
+                    <div class="mt-3 d-flex justify-content-center justify-content-md-start">
+                        <a href="#" class="btn btn-light btn-circle me-2 facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="btn btn-light btn-circle me-2 instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-light btn-circle me-2 youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="btn btn-light btn-circle whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+
                 </div>
 
             </div>
         </div>
+
+        <!-- Copyright Bar -->
+        <div class="text-center py-3 mt-4 border-top border-secondary">
+            <p class="mb-0">&copy; 2025 Woofiezz. All Rights Reserved.</p>
+        </div>
     </footer>
+
+
+    <a href="https://wa.me/0001112223" target="_blank" class="btn btn-success btn-circle whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-dark btn-circle back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
 
 
@@ -857,7 +778,6 @@
 
     <!-- Custom javascript file -->
     <script src="app.js"></script>
-
 
 </body>
 
