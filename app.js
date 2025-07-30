@@ -91,20 +91,6 @@ backToTop.addEventListener("click", function () {
 });
 
 
-
-// promotion section cross button
-document.addEventListener("DOMContentLoaded", function () {
-    const closeBtn = document.querySelector("#topBanner .btn-close");
-    const banner = document.getElementById("topBanner");
-
-    closeBtn.addEventListener("click", function () {
-        banner.classList.add("hide");
-        setTimeout(() => banner.remove(), 500); // removes from DOM after fade
-    });
-});
-
-
-
 // Toggle Hamburger ↔ Cross
 document.addEventListener("DOMContentLoaded", function () {
     const toggler = document.querySelector(".custom-toggler");
